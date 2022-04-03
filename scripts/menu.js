@@ -35,6 +35,16 @@ $(() => {
         }
     })
 
+    buy = (id) => {
+        if (itemBuyTimes.get(id) >= 1) {
+            itemBuyTimes.set(id, (itemBuyTimes.get(id) + 1));
+        } else {
+            itemBuyTimes.set(id, 1);
+        }
+        renderItemInCart(id);
+        updateCartPriceWithVat(id, itemPrices[(id - 1)], 1);
+    }
+
     /**
      * start function, show the items in the menu
      */
@@ -42,34 +52,34 @@ $(() => {
         for (let item of menuItems) {
 
             const nextItem = $('.hiddenMenuItem.hidden').clone();
-
             nextItem.removeClass('hidden hiddenMenuItem')
             nextItem.addClass('menuItem')
 
             nextItem.appendTo('.menus')
                 .children('h3').html(`${item.title}, ${item.price}`);
-
             nextItem.children(`img`).attr(`src`, item.image);
-
             nextItem.attr('id', itterator);
+
             itterator++;
+
             itemPrices.push(item.price);
+
+            $('.menus').children('.menuItem').children('.img').draggable({
+                stop: function(event, ui){
+                    id = $(this).parent('.menuItem').attr('id');
+                    buy(id);
+                },
+                containment: '.container',
+                revert: 'invalid'
+            });
         }
     }
 
     //when buy is clicked on menu item
     $('body').on('click', '.menuItem button', function () {
         const btn = $(this),
-            id = btn.parent('.menuItem').attr('id'),
-            price = itemPrices[(id - 1)];
-
-        if (itemBuyTimes.get(id) >= 1) {
-            itemBuyTimes.set(id, (itemBuyTimes.get(id) + 1));
-        } else {
-            itemBuyTimes.set(id, 1);
-        }
-        renderItemInCart(id);
-        updateCartPriceWithVat(id, price, 1);
+            id = btn.parent('.menuItem').attr('id');
+        buy(id);
     })
 
     //buy again button
@@ -109,10 +119,18 @@ $(() => {
         removeButton.appendTo(item);
         if (!cartItems.includes(id, 0)) {
             cartItems.push(id);
-            item.children('.addToCartButton').html('buy again');
+            item.children('.addToCartButton').html('buy more');
             item.appendTo('.cart');
         }
-        // console.log(item);
+        $('.cart').children('.cartItem').children('img').draggable({
+            stop: function(event, ui){
+                btn = $(this).parent('.cartItem').children('.remove');
+                removeFromCart(btn);
+                updateCartPriceWithVat(id, itemPrices[(id - 1)], 0);
+                itemBuyTimes.delete(id);
+            },
+            containment: '.container'
+        })
         updateBuyCount(item, id);
     }
 
