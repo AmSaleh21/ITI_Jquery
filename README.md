@@ -5,7 +5,7 @@ An interactive menu, 2 panels menu and cart, menu items can be bought by clickin
 ## Table of contents
 
 - [Overview](#overview)
-    - [Video](#video)
+    - [Gif](#Gif)
 - [My process](#process)
     - [Built with](#built-with)
     - [Libraries](#Libraries)
@@ -13,9 +13,9 @@ An interactive menu, 2 panels menu and cart, menu items can be bought by clickin
 
 ## Overview
 
-### Video
+### Gif
 
-<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed/LXJwySxC#7Ivc8BfwF7PQVojZFjduY242XEIuO9ZyO9k2GGQHv_4" allowfullscreen ></iframe>
+![screen-gif](./HyperXRestaurant.gif)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
