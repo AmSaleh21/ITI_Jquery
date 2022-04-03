@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery ajax menu</title>
+    <link rel="stylesheet" href="./styles/stylesheet.css">
+</head>
+
+<body>
+    <header>
+        <center><h1>Hyper X</h1></center>
+    </header>
+    <!-- 
+        a dummy template to create the menu items
+        id each new created item
+    -->
+    <div class="hiddenMenuItem hidden" id="">
+        <h3></h3> <!-- name and price -->
+        <h4></h4> <!-- for cart, amount of said item-->
+        <img src="">
+        <button class="addToCartButton">Buy</button>
+    </div>
+    <div class="container">
+        <div class="split-layout">
+            <h2 class="hidden" id="error">There was an error! Please try again later</h2>
+            <img src="./sources/loader.webp" id="loader">
+            <div class="split-layout__item menus">
+                <h2>Available Items</h2>
+            </div>
+
+            <div class="split-layout__divider">
+                <div class="split-layout__rule"></div>
+                <div class="split-layout__label" id=""></div>
+                <div class="split-layout__rule"></div>
+            </div>
+
+            <div class="split-layout__item cart">
+                <h2>Cart</h2>
+            </div>
+            <div class="bill">
+                <label>Total:</label>
+                <label id="total">0</label><br>
+                <label>Delivery:</label>
+                <label id="delivery">0</label><br>
+                <label>VAT:</label>
+                <label id="VAT">0</label><br>
+                <label>Discount</label>
+                <label id="Discount">0</label><br>
+                <label>Order Total:</label>
+                <label id="order-total">0</label>
+            </div>
+        </div>
+
+    </div>
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/jquery-ui.min.js"></script>
+    <script src="./scripts/menu.js"></script>
+</body>
+
+</html>

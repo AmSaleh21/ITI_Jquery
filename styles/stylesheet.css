@@ -1,0 +1,85 @@
+*{
+    font: raleway;
+}
+/* similar to body*/
+html {
+    padding: 0em 2em;
+    background: #181a1b;
+    color: #fff;
+}
+
+/* helper classes */
+.flex {
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+}
+
+.justify-left {
+    justify-content: left;
+}
+
+.justify-right {
+    justify-content: right;
+}
+
+.align-center {
+    align-items: center;
+}
+/**/
+
+/* splitter */
+.split-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+.split-layout__item {
+    flex: 1;
+    padding-left: 1em;
+    padding: 0;
+}
+
+.split-layout__divider {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.split-layout__label {
+    padding: 1em;
+}
+
+.split-layout__rule {
+    flex: 1;
+    border-style: solid;
+    border-color: rgba(255, 255, 255, .3);
+    border-width: 0 1px 0 0;
+}
+
+/* hidden template */
+.hidden {
+    display: none;
+}
+
+h2{
+    padding-bottom: 2em;
+}
+
+#error {
+    color: red;
+}
+
+/* to control the size of the images*/
+img{
+    height: 60px;
+    width: 60px;
+}
+
+.remove {
+    background-color: red;
+}
