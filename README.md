@@ -4,21 +4,10 @@ An interactive menu, 2 panels menu and cart, menu items can be bought by clickin
 
 ## Table of contents
 
-- [Overview](#overview)
-    - [Gif](#Gif)
 - [My process](#process)
     - [Built with](#built-with)
     - [Libraries](#Libraries)
 - [Author](#authors)
-
-## Overview
-
-### Gif
-
-![screen-gif](./HyperXRestaurant.gif)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 ## process
 1) Clone the project
