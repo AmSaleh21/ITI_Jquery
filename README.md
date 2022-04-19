@@ -9,6 +9,10 @@ An interactive menu, 2 panels menu and cart, menu items can be bought by clickin
     - [Libraries](#Libraries)
 - [Author](#authors)
 
+##GIF
+
+![HyperXRestaurant.gif](HyperXRestaurant.gif)
+
 ## process
 1) Clone the project
 
@@ -33,6 +37,6 @@ An interactive menu, 2 panels menu and cart, menu items can be bought by clickin
 
 ## Authors
 
-* Abdelrahman Saleh   - [Github](https://github.com/AmSaleh21)
+* Abdelrahman Saleh   - [Github](https://github.com/AmSaleh21) - [Linkedin](https://www.linkedin.com/in/amsaleh21/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
